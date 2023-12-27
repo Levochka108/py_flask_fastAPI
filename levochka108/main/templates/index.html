@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интернет-магазин</title>
+    <link rel="stylesheet" href="/py_flask_fastAPI/levochka108/main/css/main.css">
+</head>
+<body>
+    <header>
+        <h1>Мой Интернет-магазин</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Главная</a></li>
+                <li><a href="/category/одежда">Одежда</a></li>
+                <li><a href="/category/обувь">Обувь</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Мой Интернет-магазин</p>
+    </footer>
+</body>
+</html>

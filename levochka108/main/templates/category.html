@@ -1,0 +1,13 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    <h2>{{ category_name }}</h2>
+    <p>Описание категории товаров {{ category_name }}</p>
+
+    <ul>
+        <li><a href="/product/куртка">Куртка</a></li>
+        <li><a href="/product/брюки">Брюки</a></li>
+        
+        <!-- Добавьте другие товары в этой категории -->
+    </ul>
+{% endblock %}

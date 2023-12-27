@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background: #C8AA70; /* Более короткий формат цвета */
+}
+
+header {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background: #3D3422; /* Более короткий формат цвета */
+}
+
+
+
+
+
+/* Убираем маркеры у всех элементов списка внутри <ul> и <ol> */
+li {
+    list-style-type: none;
+}
+
+/* Убираем маркеры только для элементов списка внутри определенного класса (например, класса "no-dots") */
+.no-dots {
+    list-style-type: none;
+}
+
+
+/* Reset CSS */
+body, h1, h2, h3, p, ul, ol, li, figure, figcaption, blockquote, dl, dd {
+    margin: 0;
+    padding: 0;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+body {
+    line-height: 1;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+body {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+a {
+    text-decoration: none;
+    color: #007bff; /* Синий цвет ссылок по умолчанию */
+}
+
+a:hover {
+    text-decoration: underline;
+}
+h1, h2, h3 {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
