@@ -5,9 +5,9 @@
     <p>Описание категории товаров {{ category_name }}</p>
 
     <ul>
-        <li><a href="/product/куртка">Куртка</a></li>
-        <li><a href="/product/брюки">Брюки</a></li>
-        
+        <li><a href="{{ url_for('product', product_name='Пиджак') }}">Пиджак</a></li>
+        <li><a href="{{ url_for('product', product_name='Брюки') }}">Брюки</a></li>
+
         <!-- Добавьте другие товары в этой категории -->
     </ul>
 {% endblock %}

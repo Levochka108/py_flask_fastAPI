@@ -3,72 +3,86 @@
     padding: 0;
 }
 
+html {
+    width: 100%;
+    height: 100%;
+}
+body{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
 main {
     display: flex;
     width: 100vw;
     height: 100vh;
-    background: #C8AA70; /* Более короткий формат цвета */
+    overflow: hidden; /* Избегаем появления скроллбара, если изображение больше окна браузера */
+}
+
+main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Растягиваем изображение, чтобы оно полностью покрывало блок */
+    z-index: -1;
 }
 
 header {
     display: flex;
     width: 100vw;
-    height: 100vh;
-    background: #3D3422; /* Более короткий формат цвета */
+    height: 150px;
+    background: #ffffff;
+    justify-content: space-around;
 }
 
+.nav__menu {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    align-content: space-around;
+    font-family: "Arial", sans-serif; /* Изменен шрифт на Arial */
+}
 
-
-
-
-/* Убираем маркеры у всех элементов списка внутри <ul> и <ol> */
 li {
-    list-style-type: none;
+    list-style: none; /* Убираем стандартные маркеры у элементов списка */
+    font-size: 24px;
 }
 
-/* Убираем маркеры только для элементов списка внутри определенного класса (например, класса "no-dots") */
-.no-dots {
-    list-style-type: none;
-}
-
-
-/* Reset CSS */
-body, h1, h2, h3, p, ul, ol, li, figure, figcaption, blockquote, dl, dd {
-    margin: 0;
-    padding: 0;
-}
-
-ul, ol {
-    list-style: none;
-}
-
-body {
-    line-height: 1;
-}
-
-blockquote, q {
-    quotes: none;
-}
-
-blockquote:before, blockquote:after, q:before, q:after {
-    content: '';
-    content: none;
-}
-
-body {
-    font-family: "Helvetica Neue", Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
-}
 a {
     text-decoration: none;
-    color: #007bff; /* Синий цвет ссылок по умолчанию */
+    color: #141414;
 }
 
 a:hover {
-    text-decoration: underline;
+    text-decoration: none;
+    color: #141414;
 }
+
 h1, h2, h3 {
+    color: #141414;
     font-weight: bold;
     margin-bottom: 0.5em;
+}
+
+/* Добавлен класс .main-logo-text для стилизации текста логотипа */
+.main-logo-text {
+    display: flex;
+    font-family: "Arial", sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: #141414;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
 }

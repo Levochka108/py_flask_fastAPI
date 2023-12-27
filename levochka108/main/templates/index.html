@@ -4,26 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Интернет-магазин</title>
-    <link rel="stylesheet" href="/py_flask_fastAPI/levochka108/main/css/main.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
 </head>
 <body>
     <header>
-        <h1>Мой Интернет-магазин</h1>
-        <nav>
-            <ul>
-                <li><a href="/">Главная</a></li>
-                <li><a href="/category/одежда">Одежда</a></li>
-                <li><a href="/category/обувь">Обувь</a></li>
-            </ul>
+        <h1 class="main-logo-text">Мой Интернет-магазин</h1>
+        <nav class="nav__menu">
+            <li><a href="{{ url_for('index') }}">Главная</a></li>
+            <li><a href="{{ url_for('category', category_name='одежда') }}">Одежда</a></li>
+            <li><a href="{{ url_for('category', category_name='обувь') }}">Обувь</a></li>
         </nav>
     </header>
 
     <main>
+        <img src="/static/images/main_page.png" alt="Обложка сайта">
         {% block content %}{% endblock %}
     </main>
 
     <footer>
         <p>&copy; 2023 Мой Интернет-магазин</p>
+        <p>Автор: Дмитрий Клочков</p>
     </footer>
 </body>
 </html>
